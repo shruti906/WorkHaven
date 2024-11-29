@@ -30,23 +30,6 @@ router.get('/mainpage',(req,res)=>{
 
 
 
-
-
-
-
-//hii
-
-
-
-
-
-
-
-
-
-
-
-
 // POST route to handle login form submission
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
