@@ -10,6 +10,13 @@ router.get('/backroom',(req,res)=>{
     res.render('backroom');
 })
 
+router.get('/login',(req,res)=>{
+    res.render('login');
+})
+
+router.get('/mainpage',(req,res)=>{
+    res.render('mainpage');
+})
 
 
 
