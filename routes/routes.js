@@ -10,6 +10,13 @@ router.get('/backroom',(req,res)=>{
     res.render('backroom');
 })
 
+router.get('/aboutus',(req,res)=>{
+    res.render('aboutus');
+})
+
+router.get('/helpcenter',(req,res)=>{
+    res.render('/helpcenter');
+})
 
 
 
