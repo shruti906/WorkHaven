@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('home.json')
+    fetch('../jsons/home.json')
         .then(response => response.json())
         .then(data => {
             // Build Navbar

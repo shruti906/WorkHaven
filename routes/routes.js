@@ -1,8 +1,8 @@
 const express = require('express');
 const router= express.Router();
-
+const path = require('path');
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'home.html'));
+    res.sendFile(path.join(__dirname, '../views/home.html'));
 });
 
 
@@ -30,7 +30,7 @@ router.post('/login', (req, res) => {
             if (err) {
                 return res.status(500).send('Error saving data');
             }
-            res.redirect('home.html');
+            res.redirect('../views/home.html');
         });
     });
 });

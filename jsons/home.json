@@ -48,9 +48,9 @@
             ]
         },
         "socialIcons": [
-            { "src": "discord.jpg", "alt": "Discord" },
-            { "src": "twt.jpg", "alt": "Twitter" },
-            { "src": "ig.jpg", "alt": "Instagram" }
+            { "src": "/images/discord.jpg", "alt": "Discord" },
+            { "src": "/image/twt.jpg", "alt": "Twitter" },
+            { "src": "/image/ig.jpg", "alt": "Instagram" }
         ]
     }
 }
