@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('mainpage.json')
+    fetch('../jsons/mainpage.json')
         .then(response => response.json())
         .then(data => {
             // Build Focus Container
