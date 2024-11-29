@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch('../jsons/home.json')
         .then(response => response.json())

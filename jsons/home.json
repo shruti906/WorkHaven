@@ -2,7 +2,7 @@
     "navbar": {
         "logo": "WORKHAVEN",
         "links": [
-            { "href": "../views/backroom.html", "text": "Product" },
+            { "href": "/backroom", "text": "Product" },
             { "href": "../views/aboutus.html", "text": "About Us" },
             { "href": "../views/helpcenter.html", "text": "Help" }
         ],

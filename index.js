@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 const routes = require('./routes/routes')
+app.set("view engine", "ejs");
 
 app.use('/',routes)
 app.use(express.static('./assets'));
