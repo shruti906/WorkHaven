@@ -23,6 +23,6 @@
             { "icon": "fa-sign-out-alt", "text": "Logout" }
         ]
     },
-    "sidebarIcons": ["ic1.png", "ic2.png", "ic3.png", "ic4.png", "ic5.png", "ic6.png", "ic7.png"],
-    "footerIcons": ["back_arrow.png", "message.png"]
+    "sidebarIcons": ["/images/ic1.png", "/images/ic2.png", "/images/ic3.png", "/images/ic4.png", "/images/ic5.png", "/images/ic6.png", "/images/ic7.png"],
+    "footerIcons": ["/images/back_arrow.png", "/images/message.png"]
 }
