@@ -7,26 +7,26 @@
             { "href": "helpcenter.html", "text": "Help" }
         ],
         "signInText": "SIGN IN",
-        "signInHref": "login.html"
+        "signInHref": "../views/login.html"
     },
     "hero": {
         "title": "Set up your own environment for shruti  the next focus session",
         "ctaText": "YOUR SPACE",
-        "ctaHref": "mainpage.html"
+        "ctaHref": "../views/mainpage.html"
     },
     "immersiveEnv": {
         "title": "Immersive digital e tgrg trhrtnvironments",
         "description": "Create a beautiful, distraction-free workspace where you can focus. Music, sounds, and loops.",
-        "imageSrc": "avatars.jpg"
+        "imageSrc": "/images/avatars.jpg"
     },
     "trendingSpaces": {
         "title": "Trending spaces",
-        "imageSrc": "trending.jpg"
+        "imageSrc": "/images/trending.jpg"
     },
     "productivityWidgets": {
         "title": "Explore productivity widgets for every use case",
         "description": "Use timers, tasks, and more to stay organized and productive.",
-        "imageSrc": "widgets.jpg"
+        "imageSrc": "/images/widgets.jpg"
     },
     "footer": {
         "logo": "WORKHAVEN",
