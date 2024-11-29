@@ -10,12 +10,6 @@ router.get('/backroom',(req,res)=>{
     res.render('backroom');
 })
 
-router.get('/login',(req,res)=>{
-    res.render('login');
-})
-
-router.get('/mainpage',(req,res)=>{
-    res.render('mainpage');
 router.get('/aboutus',(req,res)=>{
     res.render('aboutus');
 })
@@ -34,7 +28,7 @@ router.get('/helpcenter',(req,res)=>{
 
 
 
-//hi
+//hii
 
 
 
