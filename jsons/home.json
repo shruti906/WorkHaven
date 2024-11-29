@@ -3,16 +3,16 @@
         "logo": "WORKHAVEN",
         "links": [
             { "href": "/backroom", "text": "Product" },
-            { "href": "../views/aboutus.html", "text": "About Us" },
-            { "href": "../views/helpcenter.html", "text": "Help" }
+            { "href": "/aboutus", "text": "About Us" },
+            { "href": "/helpcenter", "text": "Help" }
         ],
         "signInText": "SIGN IN",
-        "signInHref": "../views/login.html"
+        "signInHref": "/login"
     },
     "hero": {
         "title": "Set up your own environment for shruti  the next focus session",
         "ctaText": "YOUR SPACE",
-        "ctaHref": "../views/mainpage.html"
+        "ctaHref": "/mainpage"
     },
     "immersiveEnv": {
         "title": "Immersive digital e tgrg trhrtnvironments",

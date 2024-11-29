@@ -18,7 +18,13 @@ router.get('/helpcenter',(req,res)=>{
     res.render('/helpcenter');
 })
 
+router.get('/login',(req,res)=>{
+    res.render('/login');
+})
 
+router.get('/mainpage',(req,res)=>{
+    res.render('/mainpage');
+})
 
 
 
