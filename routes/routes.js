@@ -15,15 +15,15 @@ router.get('/aboutus',(req,res)=>{
 })
 
 router.get('/helpcenter',(req,res)=>{
-    res.render('/helpcenter');
+    res.render('helpcenter');
 })
 
 router.get('/login',(req,res)=>{
-    res.render('/login');
+    res.render('login');
 })
 
 router.get('/mainpage',(req,res)=>{
-    res.render('/mainpage');
+    res.render('mainpage');
 })
 
 
