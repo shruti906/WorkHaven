@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 24px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #b1d4e0, #e5c2c2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+/* About Text Styling */
+.about-text {
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+    color: #333;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Feature Box Styling */
+.feature-box {
+    flex: 1;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Pastel Colors for Feature Boxes */
+.pastel-1 {
+    background-color: #f5d5cb;
+}
+
+.pastel-2 {
+    background-color: #d8e2dc;
+}
+
+.pastel-3 {
+    background-color: #eae4e9;
+}
+
+/* Feature Titles and Descriptions */
+.feature-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 60px;
+}

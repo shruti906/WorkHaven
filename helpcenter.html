@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <style>
+        body {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  /* Black color overlay with 50% transparency */
+                url('https://t4.ftcdn.net/jpg/01/26/08/21/240_F_126082169_KlqWhWjl4QZRtrt9TzwZLt8U8qcBfrsq.jpg');  /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;  /* White text for contrast */
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            height: 735px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        
+        
+        .header h1 {
+            font-size: 42px;
+            
+        }
+        
+        
+        
+        .header {
+            background-color: rgba(193, 193, 193);
+            padding: 20px;
+            color: #050505;
+            text-align: center;
+            width: 100vw; /* Ensures the header spans the full viewport width */
+            position: relative;
+            margin-left: calc(-50vw + 50%); /* Centers the full-width header */
+            left: 0;
+            right: 0;
+            top:-25px;
+        }
+        
+        .go-to-website {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #708ba5b9;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .search-bar input {
+            margin-top: 20px;
+            margin-left: 1200px;
+            padding: 10px;
+            width: 20%;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        
+        .faq h2 {
+            font-size: 28px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+        
+        .faq h2 span {
+            margin-right: 10px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            column-gap: 150px;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #a7acf7, #ccd5f0);
+            padding: 15px;
+            color: #333;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .faq-item:hover {
+            background: linear-gradient(135deg, #8f98f2, #bac6ed);
+        }
+        
+        .gradient-purple {
+            background: linear-gradient(135deg, #d2bcf7, #f7d1fc);
+        }
+        
+        .gradient-green {
+            background: linear-gradient(135deg, #c8f7bc, #d6f7e2);
+        }
+        
+        .gradient-blue {
+            background: linear-gradient(135deg, #bcdaf7, #d3e7f7);
+        }
+        
+        .gradient-pink {
+            background: linear-gradient(135deg, #f7cbd3, #f7d7d1);
+        }
+        
+        .info-section {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+            margin: 40px 0;
+        }
+        
+        .info-card {
+            background-color: #dce0d8;
+            border-radius: 10px;
+            padding-bottom: 20px;
+            width: 45%;
+            text-align: center;
+        }
+        
+        .info-card .emoji {
+            font-size: 40px;
+        }
+        
+        .email-section {
+            margin-top: 30px;
+        }
+        
+        .email-button {
+            padding: 10px 20px ;
+            background-color: #dce0d8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h4 style="text-align: left;">WORKHAVEN</h4>
+            <h1>Help Center</h1>
+            <button class="go-to-website">Go to website</button>
+            <div class="search-bar">
+                <input type="text" placeholder=" 🔍   How can we help you?">
+            </div>
+        </div>
+
+        <section class="faq">
+            <h2><span>✨</span> Frequently Asked</h2>
+            <div class="faq-grid">
+                <a href="#" class="faq-item gradient-purple">How to use to-do list</a>
+                <a href="#" class="faq-item gradient-green">Customise your room</a>
+                <a href="#" class="faq-item gradient-blue">Privacy Policy</a>
+                <a href="#" class="faq-item gradient-pink">Terms of Service</a>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <span class="emoji">👋</span>
+                <h3>Getting Started</h3>
+                <p>How to get started with workhaven and make most out of it</p>
+            </div>
+
+            <div class="info-card">
+                <span class="emoji">❓</span>
+                <h3>General FAQ</h3>
+                <p>Commonly asked question about logging in, features etc</p>
+            </div>
+        </section>
+
+        <div class="email-section">
+            <p>Not finding what you are looking for?</p>
+            <button class="email-button">Send us an email</button>
+        </div>
+    </div>
+</body>
+</html>

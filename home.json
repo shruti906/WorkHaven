@@ -1,0 +1,56 @@
+{
+    "navbar": {
+        "logo": "WORKHAVEN",
+        "links": [
+            { "href": "/backroom.html", "text": "Product" },
+            { "href": "aboutus.html", "text": "About Us" },
+            { "href": "helpcenter.html", "text": "Help" }
+        ],
+        "signInText": "SIGN IN",
+        "signInHref": "login.html"
+    },
+    "hero": {
+        "title": "Set up your own environment for shruti  the next focus session",
+        "ctaText": "YOUR SPACE",
+        "ctaHref": "mainpage.html"
+    },
+    "immersiveEnv": {
+        "title": "Immersive digital e tgrg trhrtnvironments",
+        "description": "Create a beautiful, distraction-free workspace where you can focus. Music, sounds, and loops.",
+        "imageSrc": "avatars.jpg"
+    },
+    "trendingSpaces": {
+        "title": "Trending spaces",
+        "imageSrc": "trending.jpg"
+    },
+    "productivityWidgets": {
+        "title": "Explore productivity widgets for every use case",
+        "description": "Use timers, tasks, and more to stay organized and productive.",
+        "imageSrc": "widgets.jpg"
+    },
+    "footer": {
+        "logo": "WORKHAVEN",
+        "links": {
+            "product": [
+                { "text": "Get started", "href": "#" },
+                { "text": "Help Center", "href": "#" }
+            ],
+            "company": [
+                { "text": "Terms of use", "href": "#" },
+                { "text": "Privacy", "href": "#" }
+            ],
+            "contact": [
+                { "text": "Email us", "href": "#" }
+            ],
+            "socials": [
+                { "text": "Instagram", "href": "#" },
+                { "text": "Twitter", "href": "#" }
+            ]
+        },
+        "socialIcons": [
+            { "src": "discord.jpg", "alt": "Discord" },
+            { "src": "twt.jpg", "alt": "Twitter" },
+            { "src": "ig.jpg", "alt": "Instagram" }
+        ]
+    }
+}

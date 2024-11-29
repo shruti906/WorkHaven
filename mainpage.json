@@ -1,0 +1,28 @@
+{
+    "focusContainer": {
+        "icon": "fa-headphones",
+        "text": "Focus",
+        "number": 1,
+        "fireIcon": "fa-fire",
+        "dropdownOptions": [
+            { "icon": "fa-calendar-alt", "text": "Plan" },
+            { "icon": "fa-globe", "text": "Explore" }
+        ]
+    },
+    "roomContainer": {
+        "circleText": "S",
+        "videoIcon": "fa-video",
+        "roomText": "Shruti's Room"
+    },
+    "topRightContainer": {
+        "speakerIcons": ["fa-volume-up", "fa-volume-mute"],
+        "minimizeIcon": "fa-minus",
+        "profileIcon": "fa-user",
+        "profileOptions": [
+            { "icon": "fa-user-cog", "text": "Profile Settings" },
+            { "icon": "fa-sign-out-alt", "text": "Logout" }
+        ]
+    },
+    "sidebarIcons": ["ic1.png", "ic2.png", "ic3.png", "ic4.png", "ic5.png", "ic6.png", "ic7.png"],
+    "footerIcons": ["back_arrow.png", "message.png"]
+}

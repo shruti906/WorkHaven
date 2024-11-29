@@ -1,0 +1,82 @@
+#sidebar{
+    background-color: white;
+    width: 80px;
+    height: 500px;
+    position: relative;
+    top: 110px;
+    border-radius: 15px;
+    left: -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#one{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#two{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#three{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#four{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#five{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#six{
+    background-color: rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+}
+#seven{
+    background-color:rgb(206, 203, 203);
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    border-radius: 15px;
+    text-align: center;
+    padding: auto;
+}
+#white{
+    height: 70px;
+    width: 90px;
+    background-color: white;
+    border-radius: 15px;
+}
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1110px;
+    margin-top: 150px;
+}
