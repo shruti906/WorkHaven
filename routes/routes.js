@@ -26,8 +26,9 @@ router.get('/mainpage',(req,res)=>{
     res.render('mainpage');
 })
 
-
-
+router.get('/contactus',(req,res)=>{
+    res.render('contactus');
+})
 
 
 // POST route to handle login form submission

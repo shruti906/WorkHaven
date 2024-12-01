@@ -16,7 +16,45 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from the project directory
 app.use(express.static(__dirname));
 
-// Default route to serve home.html
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// MongoDB Connection
+mongoose
+  .connect("mongodb://127.0.0.1:27017/contactMessages", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error(err));
+
+// Schema and Model
+const messageSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+  date: { type: Date, default: Date.now },
+});
+
+const Message = mongoose.model("Message", messageSchema);
+
+// Routes
+app.post("/api/contact", async (req, res) => {
+  const { name, email, message } = req.body;
+  
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
+  try {
+    const newMessage = new Message({ name, email, message });
+    await newMessage.save();
+    res.status(200).json({ success: "Message sent successfully!" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 
 // Start the server

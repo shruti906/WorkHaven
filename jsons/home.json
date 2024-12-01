@@ -10,12 +10,12 @@
         "signInHref": "/login"
     },
     "hero": {
-        "title": "Set up your own environment for shruti  the next focus session",
+        "title": "Set up your own environment for the next focus session",
         "ctaText": "YOUR SPACE",
         "ctaHref": "/mainpage"
     },
     "immersiveEnv": {
-        "title": "Immersive digital e tgrg trhrtnvironments",
+        "title": "Immersive digital environments",
         "description": "Create a beautiful, distraction-free workspace where you can focus. Music, sounds, and loops.",
         "imageSrc": "/images/avatars.jpg"
     },
@@ -49,8 +49,8 @@
         },
         "socialIcons": [
             { "src": "/images/discord.jpg", "alt": "Discord" },
-            { "src": "/image/twt.jpg", "alt": "Twitter" },
-            { "src": "/image/ig.jpg", "alt": "Instagram" }
+            { "src": "/images/twt.jpg", "alt": "Twitter" },
+            { "src": "/images/ig.jpg", "alt": "Instagram" }
         ]
     }
 }
