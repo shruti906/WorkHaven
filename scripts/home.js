@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </ul>
                 </nav>
                 <button class="sign-in-btn" onclick="location.href='${data.navbar.signInHref}';">${data.navbar.signInText}</button>
-                <button class="sign-up-btn" onclick="location.href='/signup';">Sign Up</button>
+                <button class="sign-up-btn sign-in-btn" onclick="location.href='/signup';">Sign Up</button>
             `;
 
             // Build Hero Section
