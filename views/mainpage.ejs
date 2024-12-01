@@ -3,27 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Dropdown Toggle Example</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('/images/backG.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        
+        .focus-container {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            height: 20px;
+            width: 140px;
+        }
+
+        
+        .room-container {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 20px;
+            left: calc(20px + 230px); 
+            z-index: 1;
+            margin-left: 540px;
+            height: 20px;
+            width: 215px;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: purple;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .top-right-container {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            height: 20px; 
+            width: 100px;
+        }
+
+        
+        .focus-container i.fa-headphones {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .focus-container .text {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        .divider {
+            width: 1px;
+            height: 20px;
+            background-color: #000;
+            margin: 0 10px;
+        }
+
+        #dropdown-toggle {
+            display: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 14px;
+            margin-left: 5px; 
+            transition: transform 0.3s; 
+        }
+
+        #dropdown-toggle:checked + label .fas {
+            transform: rotate(180deg); 
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            width: 140px;
+        }
+
+        #dropdown-toggle:checked ~ .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content div {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Remove bottom border for last item */
+        .dropdown-content div:last-child {
+            border-bottom: none;
+        }
+
+        /* Style for icons in dropdown */
+        .dropdown-content div i {
+            margin-right: 10px;
+        }
+
+        /* Style for number and fire icon */
+        .focus-container .number {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        .focus-container i.fa-fire {
+            font-size: 18px;
+            color: orange;
+        }
+
+        /* Speaker Icon Toggle */
+        #speaker-toggle {
+            display: none; /* Hide the checkbox */
+        }
+
+        /* Speaker Icon */
+        .top-right-container i.fa-volume-up {
+            display: inline-block;
+            opacity: 0.9; /* Reduced opacity */
+        }
+
+        /* Mute Icon */
+        .top-right-container i.fa-volume-mute {
+            display: none;
+            opacity: 0.9; /* Reduced opacity */
+        }
+
+        /* Toggle to show the mute icon and hide the speaker icon */
+        #speaker-toggle:checked + label .fa-volume-up {
+            display: none;
+        }
+
+        #speaker-toggle:checked + label .fa-volume-mute {
+            display: inline-block;
+        }
+
+        /* Minimize Icon */
+        .top-right-container i.fa-minus {
+            margin-left: 10px;
+            opacity: 0.9; /* Reduced opacity */
+        }
+
+        /* Profile Dropdown Arrow */
+        #profile-dropdown-toggle {
+            display: none; /* Hide checkbox */
+        }
+
+        .profile-arrow {
+            font-size: 14px;
+            margin-left: 5px; /* Space between profile icon and arrow */
+            transition: transform 0.3s;
+        }
+
+        /* Rotate arrow when profile dropdown is toggled */
+        #profile-dropdown-toggle:checked + label .fas {
+            transform: rotate(180deg); /* Rotating arrow */
+        }
+
+        /* Profile Dropdown Content */
+        .profile-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            width: 140px;
+        }
+
+        /* Show profile dropdown when checkbox is checked */
+        #profile-dropdown-toggle:checked ~ .profile-dropdown-content {
+            display: block;
+        }
+
+        /* Profile options style */
+        .profile-dropdown-content div {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Remove bottom border for last item */
+        .profile-dropdown-content div:last-child {
+            border-bottom: none;
+        }
+
+        /* Style for icons in profile dropdown */
+        .profile-dropdown-content div i {
+            margin-right: 10px;
+        }
+
+        /* Room Dropdown */
+        #room-dropdown-toggle {
+            display: none; /* Hide the checkbox */
+        }
+
+        /* Rotate room dropdown arrow when checked */
+        #room-dropdown-toggle:checked + label .fas {
+            transform: rotate(180deg); /* Rotating arrow */
+        }
+
+        /* Room Dropdown Content */
+        .room-dropdown-content {
+            
+            position: absolute;
+            top: 0px;
+            left: 260px;
+            right: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            width: 100px;
+        }
+
+        /* Show room dropdown when checkbox is checked */
+        #room-dropdown-toggle:checked ~ .room-dropdown-content {
+            display: block;
+        }
+
+        /* Style for room options */
+        .room-dropdown-content div {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Remove bottom border for last item in room dropdown */
+        .room-dropdown-content div:last-child {
+            border-bottom: none;
+        }
+        #sidebar{
+            background-color: rgb(255, 255, 255);
+            width: 70px;
+            height: 450px;
+            position: relative;
+            top: 110px;
+            border-radius: 15px;
+            right:- 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        #one{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #two{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #three{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #four{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #five{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #six{
+            background-color: rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        #seven{
+            background-color:rgb(206, 203, 203);
+            height: 50px;
+            width: 50px;
+            margin-left: 15px;
+            border-radius: 15px;
+            text-align: center;
+            padding: auto;
+        }
+        #white{
+            height: 70px;
+            width: 90px;
+            background-color: white;
+            border-radius: 15px;
+        }
+        #footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 1110px;
+            margin-top: 150px;
+        }
+    </style>
+    <script src="mainpage.js" defer></script>
 </head>
 <body>
-
-    <!-- Focus Container -->
     <div class="focus-container"></div>
-
-    <!-- Room Container -->
     <div class="room-container"></div>
-
-    <!-- Top Right Container -->
     <div class="top-right-container"></div>
-
-    <!-- Sidebar -->
     <div id="sidebar"></div>
-
-    <!-- Footer -->
     <div id="footer"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>
