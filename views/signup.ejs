@@ -1,20 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ...existing code... -->
-    <link rel="stylesheet" href="/style/signup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- <link rel="stylesheet" href="/style/signup.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #e6e6fa, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            display: flex;
+        }
+
+        .signup-image {
+            background: url('https://via.placeholder.com/400x400?text=Sign+Up') no-repeat center center;
+            background-size: cover;
+            flex: 1;
+        }
+
+        .signup-form {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-form h1 {
+            font-size: 2rem;
+            color: #6a5acd;
+            margin-bottom: 1.5rem;
+        }
+
+        .signup-form label {
+            font-size: 1rem;
+            color: #6a5acd;
+            margin: 0.5rem 0 0.2rem;
+            align-self: start;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            background: #6a5acd;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .signup-form button:hover {
+            background: #836fff;
+        }
+
+        @media (max-width: 768px) {
+            .signup-container {
+                flex-direction: column;
+            }
+
+            .signup-image {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- ...existing code... -->
-    <form action="/signup" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <button type="submit">Sign Up</button>
-    </form>
-    <!-- ...existing code... -->
+    <div class="signup-container">
+        <div class="signup-image"></div>
+        <div class="signup-form">
+            <h1>Create Your Account</h1>
+            <form action="/signup" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

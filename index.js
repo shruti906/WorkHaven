@@ -23,7 +23,7 @@ app.use(express.static('./scripts'));
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://workhaven/workhaven", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect("mongodb://localhost:27017/local", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error(err));
 
