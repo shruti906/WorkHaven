@@ -1,6 +1,8 @@
 const express = require('express');
-const router= express.Router();
+const router = express.Router();
 const path = require('path');
+const mongoose = require('mongoose');
+const User = require('../models/User'); // Assuming User model is defined in models/User.js
 
 router.get('/', (req, res) => {
     res.render('home');
@@ -30,28 +32,20 @@ router.get('/contactus',(req,res)=>{
     res.render('contactus');
 })
 
-
 // POST route to handle login form submission
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    const loginData = { email, password };
 
-    const filePath = path.join(__dirname, 'login.json');
-
-    // Read existing data
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        let json = [];
-        if (!err && data) {
-            json = JSON.parse(data);
+    try {
+        const user = await User.findOne({ email, password });
+        if (user) {
+            res.redirect('/mainpage');
+        } else {
+            res.status(401).send('Invalid email or password');
         }
-        json.push(loginData);
-        fs.writeFile(filePath, JSON.stringify(json, null, 2), (err) => {
-            if (err) {
-                return res.status(500).send('Error saving data');
-            }
-            res.redirect('../views/home.html');
-        });
-    });
+    } catch (error) {
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 module.exports = router;
