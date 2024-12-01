@@ -76,5 +76,31 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="${data.footerIcons[1]}" alt="" style="height: 70px; text-align: center; margin-left: 10px;">
                 </div>
             `;
+
+            // Handle responsive content adjustments
+            window.addEventListener('resize', function() {
+                const windowWidth = window.innerWidth;
+
+                // Adjust focus container icon size on smaller screens
+                const focusIcon = focusContainer.querySelector('i');
+                if (windowWidth <= 768) {
+                    focusIcon.style.fontSize = '18px';  // smaller icons for smaller screens
+                } else {
+                    focusIcon.style.fontSize = '24px';
+                }
+
+                // Adjust the sidebar icon sizes on mobile
+                const sidebarIcons = document.querySelectorAll('#sidebar div img');
+                sidebarIcons.forEach(icon => {
+                    if (windowWidth <= 768) {
+                        icon.style.height = '40px';  // smaller icons
+                    } else {
+                        icon.style.height = '50px';
+                    }
+                });
+            });
+
+            // Initialize resize event on load
+            window.dispatchEvent(new Event('resize'));
         });
 });
