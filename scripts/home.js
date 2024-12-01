@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     fetch('../jsons/home.json')
         .then(response => response.json())
@@ -15,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </ul>
                 </nav>
                 <button class="sign-in-btn" onclick="location.href='${data.navbar.signInHref}';">${data.navbar.signInText}</button>
+                <button class="sign-up-btn" onclick="location.href='/signup';">Sign Up</button>
             `;
 
             // Build Hero Section
